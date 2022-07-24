@@ -1,0 +1,136 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+:root {
+    --fontUno: 'Outfit', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--fontUno);
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.fondo_azul {
+    background: hsl(212, 45%, 89%);
+    height: auto;
+    width: 100%;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(450px, 1fr) 1fr;
+}
+
+.fondo_blanco {
+    background: hsl(0, 0%, 100%);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}
+
+.text_Negrilla {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.fondo_blanco p:last-child {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: #BDBDBD;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+    .fondo_azul {
+        background: hsl(212, 45%, 89%);
+        height: auto;
+        width: 100%;
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .fondo_blanco {
+        background: hsl(0, 0%, 100%);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .text_Negrilla {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .fondo_blanco p:last-child {
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        color: #BDBDBD;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fondo_azul {
+        background: hsl(212, 45%, 89%);
+        height: auto;
+        width: 100%;
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .fondo_blanco {
+        background: hsl(0, 0%, 100%);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .text_Negrilla {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .fondo_blanco p:last-child {
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        color: #BDBDBD;
+    }
+}
